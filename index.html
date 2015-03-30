@@ -106,7 +106,7 @@
 }
 .balloon2{
 	position: absolute;
-	bottom:-200px;
+	bottom:-220px;
 	background: url("Files/balloons.png");
 	width: 200px;
 	height: 296px;
@@ -121,9 +121,11 @@
 }
 </style>
 <script src="JS/jquery-1.11.2.min.js"></script>
+<script src="JS/jquery-ui.min.js"></script>
 <script src="JS/typed.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
+setTimeout(balloons,19000);
 	function balloons(){
     $(".balloon1").animate(
       {
@@ -134,14 +136,13 @@ $(document).ready(function() {
         top: "-310" 
       }, 20000);
 }
-setTimeout(balloons,19000);
 });
 </script>
 <script type="text/javascript">
 $(document).ready(function()
 {
 $("#happy_birthday").hide();
-var count=19;
+var count=1;
 var interval=1000;
 
 var counter=setInterval(timer, interval); //1000 will  run it every 1 second
@@ -155,7 +156,7 @@ function timer()
      clearInterval(counter);
      //counter ended, do something here
      document.getElementById("timer").style.display = 'none';
-     $("#happy_birthday").show("explode", { pieces: 64 }, 2000);
+     $("#happy_birthday").show(2000);
      return;
      
   }
